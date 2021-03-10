@@ -146,6 +146,7 @@ const HomePage = () => {
           label="Afk alerts enable"
           isChecked={checkedItems["afk-alert-status"]}
           onCheckboxChange={handleCheckboxChange}
+          mods={["text-center"]}
           isLabelHidden={true}
         />,
       },
@@ -160,6 +161,7 @@ const HomePage = () => {
           label="BRK alerts enable"
           isChecked={checkedItems["brk-alert-status"]}
           onCheckboxChange={handleCheckboxChange}
+          mods={["text-center"]}
           isLabelHidden={true}
         />,
       },
@@ -174,6 +176,7 @@ const HomePage = () => {
           label="CGW alerts enable"
           isChecked={checkedItems["cgw-alert-status"]}
           onCheckboxChange={handleCheckboxChange}
+          mods={["text-center"]}
           isLabelHidden={true}
         />,
       },
@@ -188,6 +191,8 @@ const HomePage = () => {
           label="FIX alerts enable"
           isChecked={checkedItems["fix-alert-status"]}
           onCheckboxChange={handleCheckboxChange}
+          mods={["text-center"]}
+          isDisabled={true}
           isLabelHidden={true}
         />,
       },
