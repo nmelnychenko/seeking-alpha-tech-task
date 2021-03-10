@@ -1,0 +1,43 @@
+.tabs-controls-list {
+  position: relative;
+  display: inline-flex;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 1px;
+    background: #000000;
+    z-index: 0;
+  }
+}
+
+.tabs-controls-list__item {
+  position: relative;
+
+  &::after {
+    content: none;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 6px;
+    background: #000;
+  }
+}
+
+.tabs-controls-list__item--active {
+  &::after {
+    content: "";
+  }
+}
+
+.tabs-control {
+  padding: 0 12px 14px;
+  font-size: 16px;
+  line-height: 19px;
+  background: none;
+  border: none;
+}

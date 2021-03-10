@@ -1,0 +1,22 @@
+.actions-group {
+  display: flex;
+  align-items: center;
+}
+
+.actions-group__item {
+  margin-right: 18px;
+
+  &--with-divider {
+    display: flex;
+    align-items: center;
+
+    &::after {
+      content: "";
+      display: block;
+      height: 28px;
+      width: 1px;
+      background: #DBDBDB;
+      margin-left: 18px;
+    }
+  }
+}
