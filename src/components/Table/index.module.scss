@@ -1,7 +1,16 @@
-.table {
-  display: block;
-  padding: 20px 24px 18px;
+.table-wrapper {
+  max-width: 100%;
+  overflow-y: hidden;
+  overflow-x: scroll;
   background: #fff;
+  padding: 20px 0 18px 24px;
+  border-right: 24px solid #fff;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  padding: 0;
+  display: block;
   border-collapse: collapse;
   text-align: left;
 }
@@ -30,6 +39,7 @@
   font-size: 12px;
   line-height: 14px;
   color: #000;
+  white-space: nowrap;
 
   &:first-of-type {
     padding-left: 0;
@@ -39,10 +49,34 @@
       justify-content: flex-start;
     }
   }
+
+  &--centered {
+    text-align: center;
+
+    .table__heading-action {
+      justify-content: center;
+    }
+  }
+}
+
+.table__cell {
+  &--wide {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 164px;
+    max-width: 164px;
+  }
 }
 
 .table__heading {
   font-weight: 700;
+
+  &--wide {
+    width: 164px;
+    max-width: 164px;
+    text-align: center;
+  }
 }
 
 .table__heading-action {

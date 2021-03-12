@@ -1,0 +1,38 @@
+.badge {
+  display: inline-block;
+  min-width: 50px;
+  padding: 2px 6px 4px;
+  background: #DBDBDB;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 10px;
+  line-height: 12px;
+  color: #757575;
+  font-weight: 700;
+  box-sizing: border-box;
+
+  &--highest {
+    background: #3D5F12;
+    color: #fff;
+  }
+
+  &--good {
+    background: #9ACE49;
+    color: #fff;
+  }
+
+  &--medium {
+    background: #EFA818;
+    color: #fff;
+  }
+
+  &--low {
+    background: #FF1A00;
+    color: #fff;
+  }
+
+  &--lowest {
+    background: #E32B30;
+    color: #fff;
+  }
+}

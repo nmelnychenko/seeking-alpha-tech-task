@@ -1,11 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useContext } from "react";
 
 // Components
 import Button from "../../components/Button";
 import ActionsGroup from "../../components/ActionsGroup";
 import Tabs from "../../components/Tabs";
 import Table from "../../components/Table";
-import Checkbox from "../../components/Checkbox";
+
+// context
+import { AlertStatusContext } from "../../context/AlertsStatus";
+
+// Content
+import { tableContent } from "./contentData/table";
 
 // Icons
 import { ReactComponent as PencilIcon } from "../../assets/icons/pencil-14.svg";
@@ -78,6 +83,7 @@ const portfolioActionsGroup = [
     )
   }
 ];
+
 const tabs = [
   {
     id: 0,
@@ -92,112 +98,17 @@ const tabs = [
 ];
 
 const HomePage = () => {
-  const defaultCheckedItems = {
-    "afk-alert-status": true
-  }
-
-  const [checkedItems, setCheckedItems] = useState({...defaultCheckedItems});
+  const { checkedItems, setCheckedItems } = useContext(AlertStatusContext);
 
   const handleCheckboxChange = ({ target }) => {
     setCheckedItems({...checkedItems, [target.name] : target.checked });
   }
 
+  const handleRangeChange = value => console.log(value);
+
   useEffect(() => {
     console.log("checkedItems: ", checkedItems);
   }, [checkedItems]);
-
-  const table = {
-    headings: [
-      {
-        title: "Symbol",
-        sortable: true,
-        id: "symbol"
-      },
-      {
-        title: "Price",
-        sortable: true,
-        id: "price"
-      },
-      {
-        title: "Change",
-        sortable: true,
-        id: "change"
-      },
-      {
-        title: "Change %",
-        sortable: true,
-        id: "relativeChange"
-      },
-      {
-        title: "Alerts",
-        sortable: false,
-        id: "alerts"
-      },
-    ],
-    rows: [
-      {
-        rowId: "0",
-        symbol: "AFK",
-        price: 19.51,
-        change: -0.14,
-        relativeChange: -0.71,
-        alerts: <Checkbox
-          name="afk-alert-status"
-          label="Afk alerts enable"
-          isChecked={checkedItems["afk-alert-status"]}
-          onCheckboxChange={handleCheckboxChange}
-          mods={["text-center"]}
-          isLabelHidden={true}
-        />,
-      },
-      {
-        rowId: "1",
-        symbol: "BRK.A",
-        price: 335200,
-        change: 1584.00,
-        relativeChange: 0.47,
-        alerts: <Checkbox
-          name="brk-alert-status"
-          label="BRK alerts enable"
-          isChecked={checkedItems["brk-alert-status"]}
-          onCheckboxChange={handleCheckboxChange}
-          mods={["text-center"]}
-          isLabelHidden={true}
-        />,
-      },
-      {
-        rowId: "2",
-        symbol: "CGW",
-        price: 41.99,
-        change: 0.04,
-        relativeChange: 0.10,
-        alerts: <Checkbox
-          name="cgw-alert-status"
-          label="CGW alerts enable"
-          isChecked={checkedItems["cgw-alert-status"]}
-          onCheckboxChange={handleCheckboxChange}
-          mods={["text-center"]}
-          isLabelHidden={true}
-        />,
-      },
-      {
-        rowId: "3",
-        symbol: "FIX",
-        price: 48.60,
-        change: -0.16,
-        relativeChange: -100.33,
-        alerts: <Checkbox
-          name="fix-alert-status"
-          label="FIX alerts enable"
-          isChecked={checkedItems["fix-alert-status"]}
-          onCheckboxChange={handleCheckboxChange}
-          mods={["text-center"]}
-          isDisabled={true}
-          isLabelHidden={true}
-        />,
-      },
-    ]
-  };
 
   return (
     <div className={styles["home-page"]}>
@@ -215,8 +126,11 @@ const HomePage = () => {
         </div>
         <div className="row">
           <Table
-            headings={table.headings}
-            rows={table.rows}
+            headings={tableContent.headings}
+            rows={tableContent.rows}
+            checkedItems={checkedItems}
+            onCheckboxChange={handleCheckboxChange}
+            onRangeChange={handleRangeChange}
           />
         </div>
       </div>

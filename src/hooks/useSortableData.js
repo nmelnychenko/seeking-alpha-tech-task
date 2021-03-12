@@ -9,10 +9,10 @@ export const useSortableData = (items, config = null) => {
     let sortableItems = [...items];
     if (sortConfig !== null) {
       sortableItems.sort((a, b) => {
-        if (a[sortConfig.key] < b[sortConfig.key]) {
+        if (a.cells[sortConfig.key].content < b.cells[sortConfig.key].content) {
           return sortConfig.direction === 'ascending' ? -1 : 1;
         }
-        if (a[sortConfig.key] > b[sortConfig.key]) {
+        if (a.cells[sortConfig.key].content > b.cells[sortConfig.key].content) {
           return sortConfig.direction === 'ascending' ? 1 : -1;
         }
         return 0;

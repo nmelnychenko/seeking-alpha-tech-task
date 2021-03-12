@@ -1,11 +1,15 @@
+import React from "react";
 import HomePage from "./containers/HomePage";
+import { AlertsStatusProvider } from "./context/AlertsStatus";
 
 import "./index.css";
 
 function App() {
   return (
     <>
-      <HomePage />
+      <AlertsStatusProvider>
+        <HomePage />
+      </AlertsStatusProvider>
     </>
   );
 }

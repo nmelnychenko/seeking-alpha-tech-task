@@ -1,0 +1,53 @@
+$trackVendors: "-webkit-slider-runnable", "-moz-range", "-ms";
+$thumbVendors: "-webkit-slider", "-moz-range", "-ms";
+
+.range-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.range-slider__limit-value {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 10px;
+  line-height: 12px;
+  color: #757575;
+}
+
+.range-slider__limit-value--left {
+  right: calc(100% + 10px);
+}
+
+.range-slider__limit-value--right {
+  left: calc(100% + 10px);
+}
+
+.range-slider__input {
+  width: 64px;
+  background: #DBDBDB;
+  -webkit-appearance: none;
+
+  @each $vendor in $trackVendors {
+    &::#{$vendor}-track {
+      width: 100%;
+      height: 4px;
+      background: #DBDBDB;
+      border-radius: 0;
+      cursor: pointer;
+    }
+  }
+
+  @each $vendor in $thumbVendors {
+    &::#{$vendor}-thumb {
+      height: 8px;
+      width: 8px;
+      margin-top: -2px;
+      border-radius: 4px;
+      background: #757575;
+      cursor: pointer;
+      -webkit-appearance: none;
+    }
+  }
+}
