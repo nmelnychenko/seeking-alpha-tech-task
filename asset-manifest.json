@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/seeking-alpha-tech-task/static/css/main.6c13ac7d.chunk.css",
+    "main.js": "/seeking-alpha-tech-task/static/js/main.c585ecfb.chunk.js",
+    "main.js.map": "/seeking-alpha-tech-task/static/js/main.c585ecfb.chunk.js.map",
+    "runtime-main.js": "/seeking-alpha-tech-task/static/js/runtime-main.98ae4f7e.js",
+    "runtime-main.js.map": "/seeking-alpha-tech-task/static/js/runtime-main.98ae4f7e.js.map",
+    "static/js/2.01950235.chunk.js": "/seeking-alpha-tech-task/static/js/2.01950235.chunk.js",
+    "static/js/2.01950235.chunk.js.map": "/seeking-alpha-tech-task/static/js/2.01950235.chunk.js.map",
+    "static/js/3.8003214c.chunk.js": "/seeking-alpha-tech-task/static/js/3.8003214c.chunk.js",
+    "static/js/3.8003214c.chunk.js.map": "/seeking-alpha-tech-task/static/js/3.8003214c.chunk.js.map",
+    "index.html": "/seeking-alpha-tech-task/index.html",
+    "static/css/main.6c13ac7d.chunk.css.map": "/seeking-alpha-tech-task/static/css/main.6c13ac7d.chunk.css.map",
+    "static/js/2.01950235.chunk.js.LICENSE.txt": "/seeking-alpha-tech-task/static/js/2.01950235.chunk.js.LICENSE.txt",
+    "static/media/arrow-down-14.acc54416.svg": "/seeking-alpha-tech-task/static/media/arrow-down-14.acc54416.svg",
+    "static/media/excel-10.16988e82.svg": "/seeking-alpha-tech-task/static/media/excel-10.16988e82.svg",
+    "static/media/headlines-14.683a630a.svg": "/seeking-alpha-tech-task/static/media/headlines-14.683a630a.svg",
+    "static/media/pencil-14.a271d008.svg": "/seeking-alpha-tech-task/static/media/pencil-14.a271d008.svg",
+    "static/media/print-14.df6738a5.svg": "/seeking-alpha-tech-task/static/media/print-14.df6738a5.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.98ae4f7e.js",
+    "static/js/2.01950235.chunk.js",
+    "static/css/main.6c13ac7d.chunk.css",
+    "static/js/main.c585ecfb.chunk.js"
+  ]
+}
