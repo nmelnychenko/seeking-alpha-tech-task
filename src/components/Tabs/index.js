@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import PropTypes from 'prop-types';
 
 import TabsControlItem from "./tabsControlItem";
 
@@ -31,6 +32,11 @@ const Tabs = ({ items, panels }) => {
       </div>
     </div>
   )
+}
+
+Tabs.propTypes = {
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
+  panels: PropTypes.arrayOf(PropTypes.any).isRequired
 }
 
 export default Tabs;

@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import classNames from "classnames";
+import PropTypes from 'prop-types';
+
 import { formatNumbers } from "../../helpers/formatNumbers";
 
 import styles from "./index.module.scss";
@@ -34,6 +36,16 @@ const RangeSlider = ({ min, max, defaultValue, label, isLabelHidden, stepsCount,
       <div className={classNames(styles["range-slider__limit-value"], styles["range-slider__limit-value--right"])}>{formatNumbers(max)}</div>
     </div>
   )
+}
+
+RangeSlider.propTypes = {
+  min: PropTypes.number.isRequired,
+  max: PropTypes.number.isRequired,
+  defaultValue: PropTypes.number,
+  label: PropTypes.string.isRequired,
+  isLabelHidden: PropTypes.bool,
+  stepsCount: PropTypes.number.isRequired,
+  onChangeCallback: PropTypes.func
 }
 
 export default RangeSlider;

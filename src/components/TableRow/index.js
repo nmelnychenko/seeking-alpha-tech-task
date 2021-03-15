@@ -1,5 +1,6 @@
 import React, {useContext, useEffect} from "react";
 import classNames from "classnames";
+import PropTypes from 'prop-types';
 
 import Checkbox from "../Checkbox";
 import RangeSlider from "../RangeSlider";
@@ -11,7 +12,7 @@ import { scoresGraduation } from "./scoresGraduationConfig";
 
 import styles from "../Table/index.module.scss";
 
-const TableRow = ({rowId, cells}) => {
+const TableRow = ({cells}) => {
   const { checkedItems, setCheckedItems } = useContext(AlertStatusContext);
 
   const handleCheckboxChange = ({ target }) => {
@@ -99,6 +100,16 @@ const TableRow = ({rowId, cells}) => {
         )}
       )}
     </tr>
+  )
+}
+
+TableRow.propTypes = {
+  cells: PropTypes.objectOf(
+    PropTypes.shape({
+      type: PropTypes.string.isRequired,
+      content: PropTypes.any,
+      mod: PropTypes.string
+    })
   )
 }
 

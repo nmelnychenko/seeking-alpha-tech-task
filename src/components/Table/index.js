@@ -1,5 +1,6 @@
 import React from "react";
 import classNames from "classnames";
+import PropTypes from 'prop-types';
 
 import { sortConfig } from "./sortConfig";
 import { useSortableData } from "../../hooks/useSortableData";
@@ -35,12 +36,17 @@ const Table = ({ headings = [], rows = [] }) => {
         )}
         <tbody>
           {items.map(({rowId, cells}) => (
-            <TableRow rowId={rowId} cells={cells} key={rowId} />
+            <TableRow cells={cells} key={rowId} />
           ))}
         </tbody>
       </table>
     </div>
   )
+}
+
+Table.propTypes = {
+  headings: PropTypes.array,
+  rows: PropTypes.array.isRequired
 }
 
 export default Table;
