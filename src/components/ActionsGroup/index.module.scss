@@ -29,6 +29,10 @@
 
     @media (min-width: 1280px) {
       display: block;
+
+      &.actions-group__item--with-divider {
+        display: flex;
+      }
     }
   }
 }

@@ -1,4 +1,10 @@
+# [Seeking Alpha Tech Task](https://nmelnychenko.github.io/seeking-alpha-tech-task/index.html)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+You can find examples of tests in folder `src/components/Tabs`.\
+Also you can find examples of storybook in folder `src/components/Button`.
+
 
 ## Available Scripts
 
