@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/seeking-alpha-tech-task/static/css/main.6c13ac7d.chunk.css",
-    "main.js": "/seeking-alpha-tech-task/static/js/main.c585ecfb.chunk.js",
-    "main.js.map": "/seeking-alpha-tech-task/static/js/main.c585ecfb.chunk.js.map",
+    "main.js": "/seeking-alpha-tech-task/static/js/main.fa2faa86.chunk.js",
+    "main.js.map": "/seeking-alpha-tech-task/static/js/main.fa2faa86.chunk.js.map",
     "runtime-main.js": "/seeking-alpha-tech-task/static/js/runtime-main.98ae4f7e.js",
     "runtime-main.js.map": "/seeking-alpha-tech-task/static/js/runtime-main.98ae4f7e.js.map",
     "static/js/2.01950235.chunk.js": "/seeking-alpha-tech-task/static/js/2.01950235.chunk.js",
@@ -22,6 +22,6 @@
     "static/js/runtime-main.98ae4f7e.js",
     "static/js/2.01950235.chunk.js",
     "static/css/main.6c13ac7d.chunk.css",
-    "static/js/main.c585ecfb.chunk.js"
+    "static/js/main.fa2faa86.chunk.js"
   ]
 }
