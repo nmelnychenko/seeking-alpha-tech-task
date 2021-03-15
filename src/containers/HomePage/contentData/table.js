@@ -64,19 +64,19 @@ export const tableContent = {
     {
       title: "Quant",
       sortable: true,
-      mod: "centered",
+      mod: "rating",
       id: "quant"
     },
     {
       title: "SA Authors",
       sortable: true,
-      mod: "centered",
+      mod: "rating",
       id: "saAuthors"
     },
     {
       title: "Sell Side",
       sortable: true,
-      mod: "centered",
+      mod: "rating",
       id: "sellSide"
     }
   ],
@@ -146,17 +146,17 @@ export const tableContent = {
         },
         quant: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 4.32
         },
         saAuthors: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 4.32
         },
         sellSide: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: null
         },
       }
@@ -226,17 +226,17 @@ export const tableContent = {
         },
         quant: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 3.00
         },
         saAuthors: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 4.32
         },
         sellSide: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 4.56
         },
       }
@@ -306,17 +306,17 @@ export const tableContent = {
         },
         quant: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: null
         },
         saAuthors: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: null
         },
         sellSide: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: null
         },
       }
@@ -386,19 +386,19 @@ export const tableContent = {
         },
         quant: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 3.00
         },
         saAuthors: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 2.34
         },
         sellSide: {
           type: "badge",
-          mod: "centered",
+          mod: "rating",
           content: 1.67
-        },
+        }
       }
     }
   ]

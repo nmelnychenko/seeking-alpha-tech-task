@@ -29,6 +29,7 @@
 
 .table__cell,
 .table__heading {
+  min-width: 67px;
   max-width: 85px;
   height: 36px;
   padding-bottom: 4px;
@@ -50,8 +51,9 @@
     }
   }
 
-  &--centered {
+  &--rating {
     text-align: center;
+    width: 74px;
 
     .table__heading-action {
       justify-content: center;
@@ -64,8 +66,8 @@
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    width: 164px;
-    max-width: 164px;
+    width: 180px;
+    max-width: 180px;
   }
 }
 

@@ -5,26 +5,24 @@ import TabsControlItem from "./tabsControlItem";
 
 import styles from "./index.module.scss";
 
-const Tabs = ({ items }) => {
+const Tabs = ({ items, panels }) => {
   const [visible, setVisible] = useState(0);
 
-  const setActiveTab = id => setVisible(id);
-
-  const findVisibleItem = () => items.find(({id}) => visible === id);
+  const setActiveTab = index => setVisible(index);
 
   const VisibleTabPanel = () => {
-    return findVisibleItem().TabPanelChildren()
+    return panels.find((item, index) => visible === index);
   }
 
   return (
     <div className={styles["tabs-wrapper"]}>
       <ul className={classNames(styles["tabs-controls-list"], "row")}>
-        {items.map(({id, controlLabel}) => (
+        {items.map((item, index) => (
           <TabsControlItem
-            key={id}
-            controlLabel={controlLabel}
-            isActive={visible === id}
-            onActionClick={() => setActiveTab(id)}
+            key={index}
+            controlLabel={item}
+            isActive={visible === index}
+            onActionClick={() => setActiveTab(index)}
           />
         ))}
       </ul>

@@ -4,19 +4,31 @@
 }
 
 .actions-group__item {
-  margin-right: 18px;
+  & + & {
+    margin-left: 18px;
+  }
 
   &--with-divider {
-    display: flex;
-    align-items: center;
+    @media (min-width: 1280px) {
+      display: flex;
+      align-items: center;
 
-    &::after {
-      content: "";
+      &::after {
+        content: "";
+        display: block;
+        height: 28px;
+        width: 1px;
+        background: #DBDBDB;
+        margin-left: 18px;
+      }
+    }
+  }
+
+  &--only-desktop {
+    display: none;
+
+    @media (min-width: 1280px) {
       display: block;
-      height: 28px;
-      width: 1px;
-      background: #DBDBDB;
-      margin-left: 18px;
     }
   }
 }

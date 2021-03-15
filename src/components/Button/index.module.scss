@@ -22,12 +22,57 @@
     width: 28px;
     padding: 0;
 
+    .button__body {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+    }
+
     .button__inner {
       justify-content: center;
     }
 
     .button__icon + .button__body {
       margin-left: 0;
+    }
+  }
+
+  &--text-only-desktop {
+    width: 28px;
+    padding: 0;
+
+    @media (min-width: 1280px) {
+      width: auto;
+      padding: 0 12px;
+    }
+
+    .button__inner {
+      justify-content: center;
+    }
+
+    .button__body {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      margin: -1px;
+      border: 0;
+      padding: 0;
+      clip: rect(0 0 0 0);
+      overflow: hidden;
+
+      @media (min-width: 1280px) {
+        position: static;
+        width: auto;
+        height: auto;
+        margin: 0;
+        clip: initial;
+        overflow: visible;
+      }
     }
   }
 }
@@ -38,6 +83,9 @@
 }
 
 .button__icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   flex-shrink: 0;
   color: inherit;
 
